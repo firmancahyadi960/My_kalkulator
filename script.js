@@ -25,6 +25,7 @@ numbers.forEach((number) => {
     });
 });
 
+// codingan Operator aritmatika
 const operators = document.querySelectorAll("#operator");
 
 operators.forEach((operator) => {
@@ -34,11 +35,14 @@ operators.forEach((operator) => {
 });
 
 const inputOperator = (operator) => {
-    prevNumber = currentNumber;
+    if (calculationOperator === ''){
+        prevNumber = currentNumber;
+    }
     calculationOperator = operator;
     currentNumber = '';
 }
 
+// Codingan button equal atau sama dengan
 const equalSign = document.querySelector('#equal');
 
 equalSign.addEventListener('click', () => {
@@ -50,19 +54,19 @@ const calculate = () => {
     let result = '';
     switch(calculationOperator) {
         case '+':
-            result = parseInt(prevNumber) + parseInt(currentNumber);
+            result = parseFloat(prevNumber) + parseFloat(currentNumber);
             break;
         case '-':
-            result = parseInt(prevNumber) -  parseInt(currentNumber);
+            result = parseFloat(prevNumber) -  parseFloat(currentNumber);
             break;
         case '*':
-            result = parseInt(prevNumber) *  parseInt(currentNumber);
+            result = parseFloat(prevNumber) *  parseFloat(currentNumber);
             break;
         case '/':
-            result = parseInt(prevNumber) /  parseInt(currentNumber);
+            result = parseFloat(prevNumber) /  parseFloat(currentNumber);
             break;
         case '%':
-            result = parseInt(prevNumber) %  parseInt(currentNumber);
+            result = parseFloat(prevNumber) %  parseFloat(currentNumber);
             break;
         default:
             break;
@@ -71,6 +75,7 @@ const calculate = () => {
     calculationOperator = '';
 }
 
+// codingan Button CLEAR
 const clearBtn = document.querySelector('#all-clear');
 clearBtn.addEventListener('click',() => {
     clearAll();
@@ -81,4 +86,19 @@ const clearAll = () => {
     prevNumber = '';
     calculationOperator = '';
     currentNumber = '0';
+}
+
+// codingan angka desimal
+const decimal = document.querySelector('#decimal');
+
+decimal.addEventListener('click', (event) => {
+    inputDecimal(event.target.value);
+    updateScreen(currentNumber);
+});
+
+inputDecimal = (dot) => {
+    if (currentNumber.includes('.')){
+        return;
+    }
+    currentNumber += dot;
 }
