@@ -71,9 +71,6 @@ button:hover {
     transform: scale(1.1);
     background-color: #E61C5D;
 }
-button#equal {
-    height: 130px;
-}
 
 .calculator #display {
     color: #FC4F4F;
