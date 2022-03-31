@@ -1,4 +1,5 @@
 # My_kalkulator
 
-Nama : Firman Cahyadi
-Projek Progate : Membuat Kalkulator
+1. Nama : Firman Cahyadi
+
+2. Projek Progate : Membuat Kalkulator
