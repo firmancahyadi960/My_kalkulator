@@ -69,7 +69,7 @@ const calculate = () => {
             result = parseFloat(prevNumber) %  parseFloat(currentNumber);
             break;
         case '**':
-            result = parseFloat(prevNumber) ** parseFloat(currentNumber);
+            result = Math.pow(parseFloat(prevNumber),parseFloat(currentNumber));
             break;
         default:
             break;
