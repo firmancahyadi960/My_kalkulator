@@ -69,8 +69,11 @@ const calculate = () => {
             result = parseFloat(prevNumber) %  parseFloat(currentNumber);
             break;
         case '**':
-            result = parseFloat(prevNumber) **  parseFloat(currentNumber);
+            result = parseFloat(prevNumber) ** parseFloat(currentNumber);
             break;
+        // case 'akar':
+        //     result = Math.sqrt(parseFloat(prevNumber));
+        //     break;
         default:
             break;
     }
